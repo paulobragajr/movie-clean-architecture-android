@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MovieCleanArchitectureAndroid"
 include ':app'
-include ':domain'
 include ':data'
+include ':domain'
