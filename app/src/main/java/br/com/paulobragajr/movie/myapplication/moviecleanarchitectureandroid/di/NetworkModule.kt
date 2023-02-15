@@ -1,6 +1,5 @@
 package br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.di
 
-
 import br.com.paulobragajr.movie.data.api.MovieApi
 import br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.BuildConfig
 import dagger.Module
@@ -30,7 +29,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofitInstance(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://api.themoviedb.org/3/")
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -41,5 +40,4 @@ object NetworkModule {
     fun provideMovieApi(retrofit: Retrofit): MovieApi {
         return retrofit.create(MovieApi::class.java)
     }
-
 }

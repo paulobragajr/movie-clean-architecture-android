@@ -1,4 +1,4 @@
-package br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.presentation.screen
+package br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.presentation.navigation
 
 sealed class Screen(val route: String) {
     object Home : Screen("home_screen")
