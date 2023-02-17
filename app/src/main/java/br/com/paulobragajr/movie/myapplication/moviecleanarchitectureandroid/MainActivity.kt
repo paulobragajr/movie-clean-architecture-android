@@ -9,7 +9,7 @@ import br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.pre
 import br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.ui.theme.MovieCleanArchitectureAndroidTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-//@AndroidEntryPoint
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private lateinit var navController: NavHostController
 

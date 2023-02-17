@@ -15,9 +15,6 @@ class MovieRemoteDataSourceImpl(private val movieApi: MovieApi) : MovieRemoteDat
 //    }
 
     override suspend fun getPopularMovies(): Flow<ResponseMovieSeries> {
-        return flow{
-            movieApi.getPopularMovies(apiKey = BuildConfig.API_KEY, page = 1)
-        }
+        return flow{ movieApi.getPopularMovies(apiKey = BuildConfig.API_KEY, page = 1) }
     }
-
 }

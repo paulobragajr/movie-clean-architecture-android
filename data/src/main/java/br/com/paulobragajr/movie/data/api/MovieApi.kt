@@ -11,5 +11,5 @@ interface MovieApi {
     suspend fun getPopularMovies(
         @Query("api_key") apiKey: String,
         @Query("page") page: Int = 1,
-    ): ResponseMovieSeries
+    ): Response<ResponseMovieSeries>
 }

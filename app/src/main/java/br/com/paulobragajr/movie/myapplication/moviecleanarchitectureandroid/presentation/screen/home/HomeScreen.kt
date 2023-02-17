@@ -9,9 +9,9 @@ import br.com.paulobragajr.movie.domain.model.MovieSeries
 import br.com.paulobragajr.movie.myapplication.moviecleanarchitectureandroid.component.MovieSeriesCard
 //, viewModel: HomeViewModel = hiltViewModel()
 @Composable
-fun HomeScreen(navController: NavHostController) {
+fun HomeScreen(navController: NavHostController,viewModel: HomeViewModel = hiltViewModel()) {
 
-//    viewModel.getMovie()
+    viewModel.getMovie()
     val allMovies = arrayListOf<MovieSeries>()
     allMovies.add(MovieSeries(original_title = "teste 1", title = "teste 1"))
     allMovies.add(MovieSeries(original_title = "teste 2", title = "teste 2"))

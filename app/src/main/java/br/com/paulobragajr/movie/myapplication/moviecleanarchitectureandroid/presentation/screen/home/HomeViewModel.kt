@@ -15,7 +15,8 @@ class HomeViewModel @Inject constructor(
 
     fun getMovie(){
         viewModelScope.launch {
-            usecase.getPopularMoviesUseCase().collect{ responseMovieSerie ->
+            var service = usecase.getPopularMoviesUseCase()
+            service.collect{ responseMovieSerie ->
                 println("Teste")
                 println(responseMovieSerie)
             }
